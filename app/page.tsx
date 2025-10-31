@@ -106,7 +106,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#19222D]">
+    <div className="min-h-screen bg-[#19222D]">
       {/* Background Animation */}
       <div className="absolute top-0 right-0 left-0 bottom-0 w-full h-full">
         <Squares
@@ -117,7 +117,7 @@ export default function Home() {
           hoverFillColor="#C6F10E"
         />
       </div>
-      {/* Content */}
+      {/* Hero Section */}
       <div className="container mx-auto h-screen">
         <div className="grid grid-cols-12 mx-4">
           {/* Kiri Lanyard */}
