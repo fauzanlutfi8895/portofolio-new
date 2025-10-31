@@ -18,7 +18,7 @@ const description =
 
 export default function Home() {
   const isMobile = useIsMobile();
-  
+
   const data = [
     {
       title: "2024",
