@@ -124,9 +124,11 @@ export default function Home() {
       <div className="container mx-auto">
         <div className={`grid ${isMobile ? "grid-cols-1" : "grid-cols-12"} mx-4 ${isMobile ? "min-h-auto" : "h-screen"}`}>
           {/* Kiri Lanyard */}
-          <div className={`${isMobile ? "col-span-1 min-h-screen" : "col-span-6"} relative`}>
-            <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} />
-            <CircularText text="CODING*WITH*FAUZAN*" onHover="speedUp" spinDuration={20} className="absolute top-50 right-28" />
+          <div className={`${isMobile ? "col-span-1 min-h-screen -top-32" : "col-span-6"} relative`}>
+            {isMobile ? <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} /> : <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} />}
+            {!isMobile && (
+              <CircularText text="CODING*WITH*FAUZAN*" onHover="speedUp" spinDuration={20} className="absolute top-50 right-28" />
+            )}
           </div>
           {/* Kanan Content */}
           <div className={`${isMobile ? "col-span-1 min-h-screen" : "col-span-6"}`}>
