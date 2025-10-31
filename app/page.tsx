@@ -1,5 +1,6 @@
 "use client";
 
+import { useIsMobile } from "./hooks/useIsMobile";
 import Lanyard from "./components/Lanyard/Lanyard";
 import RotatingText from "./components/TextAnimation/RotatingText/RotatingText";
 import SplitText from "./components/TextAnimation/SplitText/SplitText";
@@ -16,6 +17,8 @@ const description =
   "Software developer with 1+ years of hands-on experience building scalable, high-performance applications. Currently specializing in React, with strong focus on clean architecture, best practices, and performance optimization. Experienced in API integration, collaborative Git workflows, and agile work environments. Continuously sharpening backend and cloud fundamentals to grow as a well-rounded engineer and future tech leader.";
 
 export default function Home() {
+  const isMobile = useIsMobile();
+  
   const data = [
     {
       title: "2024",
@@ -118,15 +121,15 @@ export default function Home() {
         />
       </div>
       {/* Hero Section */}
-      <div className="container mx-auto h-screen">
-        <div className="grid grid-cols-12 mx-4">
+      <div className="container mx-auto">
+        <div className={`grid ${isMobile ? "grid-cols-1" : "grid-cols-12"} mx-4 ${isMobile ? "min-h-auto" : "h-screen"}`}>
           {/* Kiri Lanyard */}
-          <div className="col-span-6 relative">
+          <div className={`${isMobile ? "col-span-1 min-h-screen" : "col-span-6"} relative`}>
             <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} />
             <CircularText text="CODING*WITH*FAUZAN*" onHover="speedUp" spinDuration={20} className="absolute top-50 right-28" />
           </div>
           {/* Kanan Content */}
-          <div className="col-span-6">
+          <div className={`${isMobile ? "col-span-1 min-h-screen" : "col-span-6"}`}>
             <div className="flex items-center h-full">
               <div className="flex flex-col gap-6">
                 {/* Ready */}
