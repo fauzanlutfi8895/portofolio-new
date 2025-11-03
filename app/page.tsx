@@ -22,6 +22,13 @@ const description =
 export default function Home() {
   const isMobile = useIsMobile();
 
+  const handleClick = (message: string) => {
+    const subject = "Job Opportunity Inquiry";
+    const email = "fauzanlutfi8895@gmail.com";
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    window.open(gmailUrl, "_blank");
+  };
+
   // Memoize timeline data to prevent unnecessary recalculations
   const mappedData = timelineData.map(item => ({
     title: item.year,
@@ -96,9 +103,11 @@ export default function Home() {
               <div>
                 <BlurText text={description} delay={50} animateBy="words" direction="top" className="text-sm sm:text-base md:text-lg mb-6 md:mb-8" />
                 <div className="flex items-center">
-                  <GradientText colors={["#40ffaa", "#C6F10E", "#40ffaa", "#C6F10E", "#40ffaa"]} animationSpeed={3} showBorder={false} className="px-4 sm:px-6 py-2 sm:py-3 rounded-lg border text-sm sm:text-base">
-                    Contact Me
-                  </GradientText>
+                  <button onClick={() => handleClick("Hello Fauzan, I would like to get in touch with you regarding a job opportunity.")} className="hover:scale-105 transition-transform">
+                    <GradientText colors={["#40ffaa", "#C6F10E", "#40ffaa", "#C6F10E", "#40ffaa"]} animationSpeed={3} showBorder={false} className="px-4 sm:px-6 py-2 sm:py-3 rounded-lg border text-sm sm:text-base">
+                      Contact Me
+                    </GradientText>
+                  </button>
                 </div>
               </div>
             </div>
