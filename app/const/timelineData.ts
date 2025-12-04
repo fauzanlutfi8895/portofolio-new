@@ -1,6 +1,16 @@
 export const timelineData = [
   {
     year: "2025",
+    text: "Freelance on FAPERTA ULM. Develop an mailing system web application named AGROHUB to facilitate communication between the faculty and students. Laravel, Inertia.js, and Tailwind CSS are used to build this application.",
+    image: [
+      "https://ik.imagekit.io/uxake262l/CV/AGROHUB.png",
+      "https://ik.imagekit.io/uxake262l/CV/ChangeStage%20-%20AGROHUB.png",
+      "https://ik.imagekit.io/uxake262l/CV/Manajemen%20Pengaturan%20-%20AGROHUB.png",
+      "https://ik.imagekit.io/uxake262l/CV/Template%20Surat%20-%20AGROHUB.png",
+    ],
+  },
+  {
+    year: "2025",
     text: "Built and implement industry-level features commonly used in modern software development.",
     image: [
       "https://ik.imagekit.io/uxake262l/CV/1.%20Chat.png?updatedAt=1762061081977",
